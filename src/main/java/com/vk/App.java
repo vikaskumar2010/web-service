@@ -6,11 +6,12 @@ import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.*;
 
 
 @EnableCaching
 //@EnableScheduling
+@EnableAspectJAutoProxy
 @SpringBootApplication
 public class App {
   public static void main(String[] args) {
