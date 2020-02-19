@@ -1,6 +1,7 @@
 package com.vk.service.impl;
 
 import org.springframework.cache.annotation.*;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.vk.exceptions.ValidationFailureExcetion;
@@ -34,6 +35,12 @@ public class MathServiceImpl implements MathService {
   @CacheEvict(value = "multiplication", allEntries = true)
   public void evictCache() {
     System.out.println("Cache eviction called!");
+  }
+
+  @Scheduled(fixedRate = 1 * 60 * 1000)
+  public void testSchedule() {
+    System.out.println("Scheduled called");
+
   }
 
 }

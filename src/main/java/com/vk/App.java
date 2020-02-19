@@ -7,10 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 @EnableCaching
-//@EnableScheduling
+@EnableScheduling
 @EnableAspectJAutoProxy
 @SpringBootApplication
 public class App {
